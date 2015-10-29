@@ -1,0 +1,39 @@
+/*initial*/
+html, body, #wrap{
+	padding: 0;
+	margin: 0;
+	border-style: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+/*intro*/
+#introWrap{
+	padding:0;
+	text-align: center;
+	height: 100%;
+	position:relative;
+	top: 25%;
+}
+
+ul {
+	padding:0;
+	li {
+	border: 2px solid black;
+	list-style: none;
+	display:inline-block;
+	}
+}
+
+
+
+#introWrap span{
+	display: block;
+	transform: rotate(-90deg)
+}
+
+#contentWrap{
+	text-align: left;
+	border: 2px solid black;
+}

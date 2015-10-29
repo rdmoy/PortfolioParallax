@@ -1,0 +1,111 @@
+* {
+margin: 0;
+}
+/*initial*/
+html, body, #wrap {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-style: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center; 
+  background-color: none;
+}
+
+/*header*/
+#header {
+  position: fixed;
+  padding-top: 1%;
+  margin: 0;
+  width:100%;
+  z-index: 50;
+}
+#header h1{
+  display: inline-block;
+  position:relative;
+  float:left;
+  margin:1%;
+}
+#header li{
+  list-style: none;
+  display: inline-block;
+  position:relative;
+  float:right;
+  padding:.5%;
+  margin:.5%;
+  border: 2px solid black;
+}
+
+/*side scrollbar*/
+#scrollBar ul {
+  padding: 10px;
+  margin: 0;
+  right: 0px;
+  top:40%;
+  position: fixed;
+  z-index: 100
+}
+#scrollBar ul li{
+  font-size: 25px;
+  padding: 5px;
+   z-index: 100;
+}
+
+/*intro*/
+#introWrap {
+  padding: 0;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  background-color: green;
+  z-index: 101;
+  }
+
+#introWrap *{
+  position: relative; 
+  top: 25%;
+  padding: 10px;
+}
+
+#introWrap ul li {
+  border: 2px solid black;
+  list-style: none;
+  display: inline-block; }
+
+#introWrap span {
+  display: block;
+  transform: rotate(-90deg); }
+
+/*content*/
+#contentWrap {
+  height: 100%;
+  position: relative;
+}
+.section{
+  height: 100%;
+  width: 100%;
+  position:relative;
+}
+.section img{
+  position: relative;
+  height: 100%;
+  max-width: 100%
+}
+
+.background{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.content{
+  background-color: white;
+  padding: 10%;
+  position: absolute;
+}
+
+
+
+
