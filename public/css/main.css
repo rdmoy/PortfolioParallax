@@ -9,7 +9,6 @@ html, body, #wrap {
   border-style: 0;
   width: 100%;
   height: 100%;
-  text-align: center; 
   background-color: none;
 }
 
@@ -60,7 +59,7 @@ html, body, #wrap {
   position: relative;
   background-color: green;
   z-index: 101;
-  }
+}
 
 #introWrap *{
   position: relative; 
@@ -75,36 +74,48 @@ html, body, #wrap {
 
 #introWrap span {
   display: block;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg); 
+}
 
 /*content*/
 #contentWrap {
   height: 100%;
   position: relative;
 }
+
 .section{
-  height: 100%;
-  width: 100%;
-  position:relative;
-}
-.section img{
-  position: relative;
-  height: 100%;
-  max-width: 100%
+  height:100%;
+  overflow: hidden;
+  background: black;
 }
 
 .background{
-  height: 100%;
-  width: 100%;
+  height:100%;
+  width:100%;
   position: absolute;
-  top: 0;
+}
+
+.background img{
+  position: absolute;
+  height: 100%; 
+  width:100%;
+} 
+
+.parallaxWindow{
+  height:30%;
+  position:relative;
 }
 
 .content{
+  opacity: .9;
   background-color: white;
   padding: 10%;
-  position: absolute;
+  position: relative;
+  z-index: 90;
+  height: 100%;
 }
+
+
 
 
 
