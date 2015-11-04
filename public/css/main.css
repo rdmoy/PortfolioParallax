@@ -84,35 +84,37 @@ html, body, #wrap {
 }
 
 .section{
-  height:100%;
-  overflow: hidden;
+  width: 100%;
   background: black;
+  display:block;
+  position: relative;
+  overflow: hidden;
+
 }
 
 .background{
-  height:100%;
-  width:100%;
-  position: absolute;
+position: relative;
+text-align: center;
+vertical-align: center;
 }
 
 .background img{
+  display:block;
   position: absolute;
-  height: 100%; 
-  width:100%;
+  
 } 
 
 .parallaxWindow{
-  height:30%;
+  height:200px;
   position:relative;
 }
 
 .content{
-  opacity: .9;
+  opacity: .5;
   background-color: white;
   padding: 10%;
   position: relative;
   z-index: 90;
-  height: 100%;
 }
 
 
