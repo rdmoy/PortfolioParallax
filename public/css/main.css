@@ -18,13 +18,17 @@ html, body, #wrap {
   padding-top: 1%;
   margin: 0;
   width:100%;
-  z-index: 50;
+  z-index: 100;
+  background-color: black;
+  color:white;
+  opacity: .8
 }
-#header h1{
-  display: inline-block;
+#header svg{
+  display: block;
   position:relative;
   float:left;
-  margin:1%;
+  margin-left :2%;
+  margin-bottom: 1%;
 }
 #header li{
   list-style: none;
@@ -33,21 +37,23 @@ html, body, #wrap {
   float:right;
   padding:.5%;
   margin:.5%;
-  border: 2px solid black;
+  border: 2px solid white;
 }
+
+
 
 /*side scrollbar*/
 #scrollBar ul {
   padding: 10px;
   margin: 0;
   right: 0px;
-  top:40%;
+  top:50%;
   position: fixed;
   z-index: 100
 }
 #scrollBar ul li{
   font-size: 25px;
-  padding: 5px;
+  padding: 10px;
    z-index: 100;
 }
 
@@ -57,24 +63,30 @@ html, body, #wrap {
   text-align: center;
   height: 100%;
   position: relative;
-  background-color: green;
+  background-color: black;
+  color:white;
   z-index: 101;
 }
 
 #introWrap *{
   position: relative; 
-  top: 25%;
+  top: 10%;
   padding: 10px;
 }
 
 #introWrap ul li {
-  border: 2px solid black;
+  border: 2px solid white;
   list-style: none;
   display: inline-block; }
 
 #introWrap span {
   display: block;
   transform: rotate(-90deg); 
+}
+
+svg{
+  width:50%;
+  height:50%;
 }
 
 /*content*/
@@ -105,12 +117,12 @@ vertical-align: center;
 } 
 
 .parallaxWindow{
-  height:200px;
+  height:300px;
   position:relative;
 }
 
 .content{
-  opacity: .5;
+  opacity: 1;
   background-color: white;
   padding: 10%;
   position: relative;

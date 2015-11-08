@@ -28,8 +28,8 @@ function scroll(event){
 function bgScroll(section){
 	var bgImg = section.querySelector("img"); //section background image
 	var sectionTop = section.dataset.top;
-	var bgOffset = -200; //position relative to top of section
-	var percent = ((sectionTop/winHeight)); 
+	var bgOffset = -100; //position relative to top of section
+	var percent = ((sectionTop)/winHeight)+.5; 
 	bgImg.style.top = (percent * bgOffset)+ "px";
 	
 }
@@ -53,10 +53,10 @@ function bgTranslate(section){
 	}
 	else{
 		bgImg.dataset.shrink = false;
-		bgImg.style.height = 500+"px";
+		bgImg.style.height = 450+"px";
 		bgImg.style.width = null;
 
-		var x = (paraWindow.clientWidth - 800)/2;
+		var x = (paraWindow.clientWidth - 800)*.5;
 		bgImg.style.transform = "translate(" + x + "px)";
 		offsetX = x;
 	}
