@@ -27,6 +27,7 @@ function scroll(event){
 
 function bgScroll(section){
 	var bgImg = section.querySelector("img"); //section background image
+
 	var sectionTop = section.dataset.top;
 	var bgOffset = -100; //position relative to top of section
 	var percent = ((sectionTop)/winHeight)+.5; 
@@ -36,13 +37,17 @@ function bgScroll(section){
 
 function bgTranslate(section){
 	var bgImg = section.querySelector("img");
+
 	var paraWindow = section.querySelector(".parallaxWindow");
 	var bgImgHeight = bgImg.dataset.height;
+
 	bgImg.dataset.height = bgImg.clientHeight //400px target
 
 	bgImg.dataset.width = section.dataset.width;
 
 	var offsetX = bgImg.dataset.offsetX;
+
+	
 
 	if (paraWindow.clientWidth >= 800){
 		bgImg.dataset.shrink = true;
@@ -52,6 +57,7 @@ function bgTranslate(section){
 	
 	}
 	else{
+
 		bgImg.dataset.shrink = false;
 		bgImg.style.height = 450+"px";
 		bgImg.style.width = null;

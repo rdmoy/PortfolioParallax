@@ -28,4 +28,4 @@ function makepaths() {
 	};
 }
 
-makepaths()
+makepaths();
