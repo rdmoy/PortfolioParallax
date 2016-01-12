@@ -14,7 +14,12 @@ listItems.addEventListener("mouseover",function(event){
 listItems.addEventListener("mouseout", function(event){
 	if (event.target.nodeName == "LI"){
 		event.target.textContent=defaultIcon;
-	event.preventDefault();
+		event.preventDefault();
 	}
 })
+
+listItems.onclick = function(event){
+	location.href = "#" + event.target.dataset.name;
+
+}
 

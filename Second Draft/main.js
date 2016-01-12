@@ -2,7 +2,6 @@ var app = {
 
 	start: function(){
 		initialize();
-		drawMask();
 	},
 
 }

@@ -7,32 +7,50 @@ var body = document.querySelector("body"); //distance body scrolled
 //Sections
 
 var backgrounds = document.getElementsByClassName("background");
-var sections = document.getElementsByClassName("section");
-
-//Set Background Visibility
-
+var bgShade = document.getElementById("introBGshade");
+var sections = document.querySelectorAll("div.section");
 
 function scroll(event){
+	event.preventDefault();
+	parallax();
+	bgVisibility();
+	// nav();
+
+}
+
+// function nav(){
+	
+// 	var currentPage="";
+// 	var scrollDist = body.scrollTop;
+	
+// 	for (var i = 0; i <= sections.length-1; i++) {
+// 		console.log(sections[i].offsetTop)
+// 		if (scrollDist >= sections[i].offsetTop && scrollDist <= sections[i+1].offsetTop){
+// 			currentPage = sections[i].id;
+// 		}
+// 	};
+// 	document.location.hash = "#"+ currentPage;
+// 	return;
+// }
+
+function parallax(){
 	var scrollDist = body.scrollTop; //Distance body scrolled
-	for (i=0;i<sections.length;i++){
-		var sectionTopOffset = sections[i].offsetTop;
+	for (i=0;i<backgrounds.length;i++){
+		var sectionTopOffset = backgrounds[i].offsetTop;
 		var currentPos = scrollDist - sectionTopOffset;
 
+		backgrounds[i].dataset.top = currentPos;
+		backgrounds[i].dataset.width = backgrounds[i].clientWidth;
 
-		sections[i].dataset.top = currentPos;
-		sections[i].dataset.width = sections[i].clientWidth;
-
-		// bgVisibility(sections[i]);
-		bgScroll(sections[i]);
-		bgTranslate(sections[i]);
+		bgScroll(backgrounds[i]);
+		bgTranslate(backgrounds[i]);
 	}
-	event.preventDefault();
 }
 
 function bgScroll(section){
 	var bgImg = section.querySelector("img"); //section background image
 	var sectionTop = section.dataset.top;
-	bgImg.style.top = (.2 * -sectionTop)+ "px";
+	bgImg.style.top = -150-(.2*(-sectionTop))+ "px";
 }
 
 function bgTranslate(section){
@@ -67,11 +85,32 @@ function bgTranslate(section){
 
 }
 
-// function bgVisibility(section){
-// 	var backgroundDiv = section.querySelector(".background");
-// 	if (section.dataset.top>0) backgroundDiv.dataset.visibility = "visible";
-// 	if (section.dataset.top<0) backgroundDiv.dataset.visibility = "hidden";
-// }
+function bgVisibility(){
+	var scrollDist = body.scrollTop;
+	var introCont = document.getElementById("introContent");
+	var topBar = document.getElementById("topBar");
+	var contents = document.getElementsByClassName("content");
+	
+	for (var i = 0 ; i <=contents.length-1; i++) {
+		if (scrollDist >=  contents[i].offsetTop/2){
+				fadeIn(contents[i])();
+			}
+		}
+
+
+	if (scrollDist !== 0) {
+		bgShade.style.visibility = 'visible';
+		topBar.style.visibility = 'visible';
+	}
+	else{bgShade.style.visibility = 'hidden';
+		topBar.style.visibility = 'hidden'}
+
+	if (bgShade.style.visibility === "visible"){
+		bgShade.style.opacity = -.2+(scrollDist/winHeight);
+		topBar.style.opacity = -.5+(.9/(winHeight/scrollDist));
+		introCont.style.opacity = 1 - 2*(scrollDist/winHeight)
+	}
+}
 	
 document.onscroll = scroll;
 body.onresize = scroll;

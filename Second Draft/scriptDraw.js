@@ -1,11 +1,11 @@
 
 
 function initialize() {
-	var intro = document.getElementById("intro");
-	var elements = intro.getElementsByClassName("introContent");
-	var navBar = document.getElementById("navBar");
+	var elements = document.getElementsByClassName("introContent");
+	var navBar = document.querySelectorAll("#navBar li");
+	fadeIn(navBar, .5, .6)();
 	fadeIn(elements, .5, .6)();
-	
+	drawMask();
 }
 
 function fadeIn(element, initDelay, otherDelay){
