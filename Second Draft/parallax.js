@@ -14,24 +14,34 @@ function scroll(event){
 	event.preventDefault();
 	parallax();
 	bgVisibility();
-	// nav();
+	nav();
 
 }
 
-// function nav(){
+function nav(){
 	
-// 	var currentPage="";
-// 	var scrollDist = body.scrollTop;
+	var currentPage="";
+	var scrollDist = body.scrollTop;
 	
-// 	for (var i = 0; i <= sections.length-1; i++) {
-// 		console.log(sections[i].offsetTop)
-// 		if (scrollDist >= sections[i].offsetTop && scrollDist <= sections[i+1].offsetTop){
-// 			currentPage = sections[i].id;
-// 		}
-// 	};
-// 	document.location.hash = "#"+ currentPage;
-// 	return;
-// }
+	for (var i = 0; i <= sections.length-1; i++) {
+		console.log(scrollDist)
+		if (scrollDist >= sections[i].offsetTop && scrollDist <= sections[i+1].offsetTop){
+			sections[i].dataset.active = "true";
+			// document.location.hash = "#" + sections[i].id;
+		}
+		else {sections[i].dataset.active = "false"}
+
+
+	};
+	
+
+
+	return;
+}
+
+window.addEventListener("hashchange", function(event){
+	event.preventDefault();
+})
 
 function parallax(){
 	var scrollDist = body.scrollTop; //Distance body scrolled
@@ -94,8 +104,8 @@ function bgVisibility(){
 	for (var i = 0 ; i <=contents.length-1; i++) {
 		if (scrollDist >=  contents[i].offsetTop/2){
 				fadeIn(contents[i])();
-			}
 		}
+	}
 
 
 	if (scrollDist !== 0) {

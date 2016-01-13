@@ -1,6 +1,7 @@
 * {
 	margin:0; 
 	padding:0;
+	box-sizing:border-box;
 }
 
 html, body, #wrap{
@@ -92,13 +93,13 @@ li{
 }
 
 #introContent{
-	min-width: 400px;
+	min-width: 600px;
 	height:370px;
 	margin-top:100px;
-	width: 10%;
+	width: 600px;
 	position:fixed;
 	color:white;
-	margin-left: 7%;
+	margin-left: 20%;
 	padding:3% 13% 1% 5%;
 	vertical-align: middle;
 	display: block;
@@ -138,7 +139,6 @@ li{
 
 .buttonBox{
 	text-align: right;
-	display: block;
 	position:relative;
 	right:50px;
 	bottom:40px;
@@ -199,15 +199,11 @@ li{
 	color:white;
 	text-align: center;
 	width: 80%;
-  padding-top: 6%;
-  padding-bottom: 6%;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-left:5%;
   position: relative;
   display: block;
   font-size: 150%;
   overflow: hidden;
+  margin:auto;
 
 }
 
@@ -215,12 +211,56 @@ li{
   	padding-bottom: 15%;
   	line-height: 30px;
   	font-size: 110%;
-  	animation-name: fadeIn;
-  	animation-duration: 5s;
+
+}
+table{
+	width:100%;
+
+}
+#appTable{
+	width: 90%;
+	text-align: center;
+	font-size: 1em;
+	margin-top:50px;
+	margin-bottom:50px;
+	
+}
+.workcol{
+	margin: 15px;
+	padding:10px;
+	height:750px;
+	width: 350px;
+	/*background-color: gray;*/
+	display: inline-block;
+	vertical-align: top;
+}
+.workcol:hover{
+	outline:1px solid #888888;
+}
+
+.workcol h1,{
+	letter-spacing: 3px;
+}
+
+.workcol *{
+	padding-top:20px;
+}
+.desc{
+	text-align: left;
+	width:250px;
+	margin:auto;
+}
+
+#appTable img{
+	width:300px;
 }
 
 #CONTACT{
 	height:1000px;
+}
+
+#CONTACT .content{
+	line-height: 50px;
 }
 
 #fields{
