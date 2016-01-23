@@ -23,3 +23,15 @@ listItems.onclick = function(event){
 
 }
 
+var iframe = document.getElementById("#iframe");
+function showResume(){
+	
+	iframe.style.visibility = 'visible';
+	console.log("here")
+}
+
+function removeResume(){
+	iframe.style.visibility = 'hidden';
+	console.log("here")
+}
+

@@ -15,27 +15,29 @@ function scroll(event){
 	parallax();
 	bgVisibility();
 	nav();
-
 }
+
 
 function nav(){
 	
 	var currentPage="";
+	var prevPage="";
+	var nextPage="";
 	var scrollDist = body.scrollTop;
 	
 	for (var i = 0; i <= sections.length-1; i++) {
-		console.log(scrollDist)
 		if (scrollDist >= sections[i].offsetTop && scrollDist <= sections[i+1].offsetTop){
 			sections[i].dataset.active = "true";
-			// document.location.hash = "#" + sections[i].id;
 		}
-		else {sections[i].dataset.active = "false"}
+		else {sections[i].dataset.active = "false"};
 
-
+		if (sections[i].dataset.active === "true")
+			{currentPage = sections[i];
+		if (i-1 >= 0) prevPage=sections[i-1];
+		if (sections[i+1]) nextPage= sections[i+1];
+	}
 	};
 	
-
-
 	return;
 }
 
@@ -115,7 +117,7 @@ function bgVisibility(){
 	else{bgShade.style.visibility = 'hidden';
 		topBar.style.visibility = 'hidden'}
 
-	if (bgShade.style.visibility === "visible"){
+	if (scrollDist >= 0){
 		bgShade.style.opacity = -.2+(scrollDist/winHeight);
 		topBar.style.opacity = -.5+(.9/(winHeight/scrollDist));
 		introCont.style.opacity = 1 - 2*(scrollDist/winHeight)

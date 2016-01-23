@@ -85,6 +85,9 @@ li{
 	line-height: 30px;
 }
 
+.section{
+	padding-top:90px;
+}
 
 /*Intro*/
 #intro{
@@ -99,8 +102,7 @@ li{
 	width: 600px;
 	position:fixed;
 	color:white;
-	margin-left: 20%;
-	padding:3% 13% 1% 5%;
+	padding-top: 10px;
 	vertical-align: middle;
 	display: block;
 }
@@ -139,20 +141,20 @@ li{
 
 .buttonBox{
 	text-align: right;
+	display:inline-block;
 	position:relative;
 	right:50px;
 	bottom:40px;
+	width: 100%;
 }
 
 #webDev{
-	position:relative;
-	font-size: 150%;
-	margin-bottom:15px;
+	display:block;
+	padding-bottom:10px;
 }
 
 .buttonBox h2{
 	display: inline-block;
-	font-size: 125%;
 }
 
 #introBGshade{
@@ -179,6 +181,7 @@ li{
 	display:block;
 	line-height: 300px;
 	vertical-align: middle;
+	margin-bottom:100px;;
 }
 
 .background img{
@@ -208,37 +211,72 @@ li{
 }
 
 #ABOUT{
-  	padding-bottom: 15%;
   	line-height: 30px;
   	font-size: 110%;
-
-}
-table{
-	width:100%;
+  	margin-bottom:50px;
 
 }
 #appTable{
 	width: 90%;
 	text-align: center;
 	font-size: 1em;
-	margin-top:50px;
-	margin-bottom:50px;
 	
 }
 .workcol{
-	margin: 15px;
+	min-width: 300px;
+	width:25%;
+	margin: 10px;
 	padding:10px;
 	height:750px;
-	width: 350px;
-	/*background-color: gray;*/
 	display: inline-block;
 	vertical-align: top;
+	text-align: center
+
 }
+
+.workcolcontent{
+	top:0;
+	width:100%;
+	height:100%;
+	margin:auto;
+	text-align: center;
+	-webkit-transition: all .2s ease;
+     -moz-transition: all .2s ease;
+       -o-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+          transition: all .2s ease;
+}
+
+.workcolmask{
+	margin: auto;
+	padding:10px;
+	margin:auto;
+	opacity: 0;
+	transition:opacity .2s linear;
+	height:100%;
+	width:25%;
+	top:0;
+	position:absolute;
+	text-align: center;
+	margin-top:100px;
+	text-shadow: 0 0 1px #000000;
+}
+
 .workcol:hover{
 	outline:1px solid #888888;
 }
 
-.workcol h1,{
+.workcol:hover .workcolmask{
+	opacity: 1;
+}
+.workcol:hover img{
+	-webkit-filter: blur(2px);
+	opacity : .5;
+
+}
+
+
+.workcolcontent h1{
 	letter-spacing: 3px;
 }
 
@@ -251,8 +289,8 @@ table{
 	margin:auto;
 }
 
-#appTable img{
-	width:300px;
+.workcol img{
+	width:100%;
 }
 
 #CONTACT{
@@ -264,7 +302,8 @@ table{
 }
 
 #fields{
-	padding:0px;
+	margin-top:25px;
+	margin-bottom: 50px;
 	 padding-left: 5%;
   	padding-right: 5%;
 	line-height: 50px;
@@ -278,6 +317,32 @@ input, textarea{
 	height:40px;
 	font-size: 110%;
 }
+
+#iframe{
+	visibility:hidden;
+	position:fixed;
+	z-index: 10000000;
+}
+
+#iframe p{
+	color:white;
+	position:fixed;
+	margin-top: 75px;
+	text-align: center;
+	margin:auto;
+	top:0;
+	width:100px;
+	z-index: 10000000;
+}
+iframe{
+  height: 600px;
+  width: 100%;
+  margin-top: 90px;
+  padding: 50px;
+  border-style: none;
+  top:0;
+position:fixed;
+  }
 
 
 

@@ -23,7 +23,7 @@
 		</div>
 
 		<div id="topBar">
-			<div id="customPathSmall">
+			<div id="customPathSmall" onclick= "document.body.scrollTop = document.documentElement.scrollTop = 0">
 			<svg xmlns="http://www.w3.org/2000/svg"
 	    	 width="33.7222in" height="23.7778in"
 	     	viewBox="0 0 2428 1712">
@@ -124,15 +124,15 @@
 			</svg>
 			</div>
 			<ul>
-				<li>Contact</li>
+				<li onclick= "location.href='#CONTACT'">Contact</li>
 				<li>Resume</li>
 			</ul>
 		</div>
 	</div>
 
-	<div id="intro" class="section">
+	<div id="intro">
 		<div id="introContent">
-			<h2 id="hiThere" class="introContent">Hi there, my name is</h2>
+			<h3 id="hiThere" class="introContent">Hi there, my name is</h3>
 
 			<div id="signatureMain">
 				<svg xmlns="http://www.w3.org/2000/svg" width="33.7222in" height="23.7778in" viewBox="0 0 2428 1712" style="z-index:100">
@@ -1272,10 +1272,8 @@
 			</div>
 
 			<div class="buttonBox">
-				<h1 id="webDev" class="introContent">Ryan Moy | Web Developer</h1>
-				<h2 class="introContent">Resume</h2>
-				<h2 class="introContent">|</h2>
-				<h2 class="introContent">Contact</h2>
+				<h2 id="webDev" class="introContent"><span>Ryan Moy</span><span> | </span><span>Web Developer</span></h2>
+				<h3 class="introContent"><span onclick="showResume()">Resume</span><span> | </span><span onclick= "location.href='#CONTACT'">Contact</span></h3>
 			</div>
 		</div>
 	</div>
@@ -1308,23 +1306,32 @@
 			</div>
 			 
 			<div class="content" id="appTable">
-				<div class="workcol">
+			<div class="workcol">
+				<div class="workcolcontent">
 					<h1>AHOY!</h1>
 					<img src="images/pirateApp.png">
 					<h2>Pirate Translator</h2>
-					<h3 class="desc">AHOY! is an application thaEnglish to Pirate library and API on the server to translate English text to Pirate text on the client.</h3>
+					<h3 class="desc" >AHOY! is an application thaEnglish to Pirate library and API on the server to translate English text to Pirate text on the client.</h3>
+				</div>
+				<div class="workcolmask" onclick="window.open('https://pirate-translator.herokuapp.com')"><h1>Click to open application</h1></div>
+			</div><!--
+				--><div class="workcol" >
+					<div class="workcolcontent">
+						<h1>Chat with Me!</h1>
+						<img src="images/chatapp.gif">
+						<h2>Messaging App</h2>
+						<h3 class="desc">Chat with Me! is an instant messaging application that uses Node.js, socket.io, and Express.js to allow multiple users to join into a group message and chat with each other in real time. Upon entering, users are prompted for a username that becomes their avatar for the duration of their session. Session data is only stored for the current session.</h3>
+					</div>
+					<div class="workcolmask" onclick="window.open('https://rdmchatapp.herokuapp.com')")><h1>Click to open application</h1></div>
 				</div><!--
 				--><div class="workcol">
-					<h1>Chat with Me!</h1>
-					<img src="images/chatapp.gif">
-					<h2>Messaging App</h2>
-					<h3 class="desc">Chat with Me! is an instant messaging application that uses Node.js, socket.io, and Express.js to allow multiple users to join into a group message and chat with each other in real time. Upon entering, users are prompted for a username that becomes their avatar for the duration of their session. Session data is only stored for the current session.</h3></td></tr>
-				</div><!--
-				--><div class="workcol">
-					<h1>Let's Draw!</h1>
-					<img src="images/drawApp.gif">
-					<h2>Drawing App</h2>
-					<h3 class="desc">Let's Draw! is a group drawing application that uses Node.js, socket.io, p5.js, and Express.js to allow users to collaborate on works of art together over the internet. All users start with a fresh canvas and are given a random color palette. Drawings made on the canvas will be mirrored on all current session users. Session data is only stored for the current session.</h3>
+					<div class="workcolcontent">
+						<h1>Let's Draw!</h1>
+						<img src="images/drawApp.gif">
+						<h2>Drawing App</h2>
+						<h3 class="desc">Let's Draw! is a group drawing application that uses Node.js, socket.io, p5.js, and Express.js to allow users to collaborate on works of art together over the internet. All users start with a fresh canvas and are given a random color palette. Drawings made on the canvas will be mirrored on all current session users. Session data is only stored for the current session.</h3>
+					</div>
+					<div class="workcolmask" onclick="window.open('https://rdmdrawingapp.herokuapp.com/')"><h1>Click to open application</h1></div>
 				</div>
 			</div>
 		</div>
@@ -1349,8 +1356,7 @@
 			<div class="content">
 				<p>Thank you for stopping by!</p> 
 				<p>Please feel free to contact me, I'd love to tell you more about my dreams and learn more about yours!</p>
-				<p>I look forward to meeting you!
-				</p>
+				<p>I look forward to meeting you!</p>
 				<form>
 					<div id="fields">
 						<label>Name:</label><br>
@@ -1366,7 +1372,12 @@
 		</div>
 		
 	</div>
+	<div id="iframe" >
+		<iframe src="Ryan D Moy Resume.pdf"></iframe>
+		<p>x</p>
+	</div>
 </div>
+
 <script src="parallax.js" type="text/javascript"></script>
 <script src="menu.js" type="text/javascript"></script>
 <script src="scriptDraw.js" type="text/javascript"></script>
