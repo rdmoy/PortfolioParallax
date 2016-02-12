@@ -118,7 +118,7 @@ function bgVisibility(){
 		topBar.style.visibility = 'hidden'}
 
 	if (scrollDist >= 0){
-		bgShade.style.opacity = -.2+(scrollDist/winHeight);
+		bgShade.style.opacity = -.2+(.75*scrollDist/winHeight);
 		topBar.style.opacity = -.5+(.9/(winHeight/scrollDist));
 		introCont.style.opacity = 1 - 2*(scrollDist/winHeight)
 	}

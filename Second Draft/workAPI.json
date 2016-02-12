@@ -1,0 +1,43 @@
+{"work":[
+	{
+		"id": 1,
+		"title": "AHOY!!!",
+		"desc": "Pirate Translator",
+		"summary": "AHOY! is an application that translates English text input and uses an English to 'Pirate Speak' library and API on the server to 'Pirate Speak' output text on the client.",
+		"url": "https://pirate-translator.herokuapp.com"
+	},
+	{
+		"id":2,
+		"title": "Chat with me!",
+		"desc": "Instant Messaging App",
+		"summary": "Chat with Me! is an instant messaging application that uses Node.js, socket.io, and Express.js to allow multiple users to join into a group message and chat with each other in real time. Upon entering, users are prompted for a username that becomes their avatar for the duration of their session. Session data is only stored for the current session.",
+		"url": "https://rdmchatapp.herokuapp.com"
+	},
+	{
+		"id": 3,
+		"title": "Let's Draw!",
+		"summary": "Group Drawing App",
+		"desc": "Let's Draw! is a group drawing application that uses Node.js, socket.io, p5.js, and Express.js to allow users to collaborate on works of art together over the internet. All users start with a fresh canvas and are given a random color palette. Drawings made on the canvas will be mirrored on all current session users. Session data is only stored for the current session.",
+		"url": "https://rdmdrawingapp.herokuapp.com/"
+	},
+	{
+		"id": 4,
+		"title": "My Forecast",
+		"desc": "Weather Forcasting App",
+		"summary": "My Forecast is a weather forecasting app that uses input from the user to find and display the forecast graphically for thier requested city using the OpenWeather API.",
+		"url": ""
+	},
+	{
+		"id": 5,
+		"title": "AnatLab Histology Slide Viewer",
+		"desc": "A PhoneGap Histology Slide Viewer for the National Museum of Health and Medicine",
+		"summary": "The Anatlab Histology Slide Viewer Application allows users to view and annotate histology slides from the National Museum of Health and Medicine's histology database. Originally a Web-Only application, the application was reprogrammed and ported to Phone-Application via PhoneGap based on the existing legacy code and server. IonicUI and AngularJS were chosen as UI frameworks for their powerful routing and MVC capabilities. The Nginx Virtual Server was re-configured to allow previously restricted images to be served to the application via the IIP Image server and IIP Mooviewer tools.",
+		"url": ""
+	},
+	{
+		"id": 6,
+		"title": "Hi There, My Name is Ryan Moy",
+		"desc": "Portfolio Website",
+		"summary": "This website is a personal project made with the goal of using only vanilla Javascript in it's creation in order to further test the skills of it's creator. All elements have been created with all original code and design no additonal libraries."
+	}
+]}

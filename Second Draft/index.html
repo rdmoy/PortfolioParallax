@@ -8,18 +8,18 @@
 </head>
 <body>
 <div id="wrap">
-	<div id="introBG" style = "background-image:url(images/citywalk.gif)">
+	<div id="introBG" style = "background-image:url(images/chicagobw.gif)">
 	</div>
 
 	<div id="header">
 		<div id="navBar">
-			<li data-name="PREV"><span>&#8896</span></li>
+			<!-- <li data-name="PREV"><span>&#8896</span></li> -->
 			<li data-name="ABOUT"><span>&#9679</span></li>
 			<li data-name="WORK"><span>&#9675</span></li>
 			<li data-name="NAV"><span>NAV</span></li>
 			<li data-name="EXPERIENCE"><span>&#9675</span></li>
 			<li data-name="CONTACT"><span>&#9675</span></li>
-			<li data-name="NEXT"><span>&#8897</span></li>
+			<!-- <li data-name="NEXT"><span>&#8897</span></li> -->
 		</div>
 
 		<div id="topBar">
@@ -125,7 +125,7 @@
 			</div>
 			<ul>
 				<li onclick= "location.href='#CONTACT'">Contact</li>
-				<li>Resume</li>
+				<li onclick="toggleResume()">Resume</li>
 			</ul>
 		</div>
 	</div>
@@ -1273,7 +1273,7 @@
 
 			<div class="buttonBox">
 				<h2 id="webDev" class="introContent"><span>Ryan Moy</span><span> | </span><span>Web Developer</span></h2>
-				<h3 class="introContent"><span onclick="showResume()">Resume</span><span> | </span><span onclick= "location.href='#CONTACT'">Contact</span></h3>
+				<h3 class="introContent"><span onclick="toggle	Resume()">Resume</span><span> | </span><span onclick= "location.href='#CONTACT'">Contact</span></h3>
 			</div>
 		</div>
 	</div>
@@ -1343,7 +1343,13 @@
 			
 			<div class="content">
 				<p>WORK</p>
+					<h2>National Museum of Health and Medicine</h2>
+					<h2>CreatePossible, LLC</h2>
+					<h2>Children's Dental World</h2>
+					<h2>Starbuck's Coffee Company</h2>
 				<p>EDUCATION</p>
+					<h2>CodeAbode Coding Bootcamp</h2>
+					<h2>Vanderbilt University</h2>
 				<p>LEADERSHIP</p>
 			</div>
 		</div>
@@ -1372,9 +1378,9 @@
 		</div>
 		
 	</div>
-	<div id="iframe" >
+	<div id="iframe">
+		<h2 onclick='toggleResume()'>CLOSE X</h2>
 		<iframe src="Ryan D Moy Resume.pdf"></iframe>
-		<p>x</p>
 	</div>
 </div>
 
